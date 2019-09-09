@@ -47,12 +47,15 @@ body,
 .fade-enter-active {
   transition: opacity 0.3s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+
+.fade-enter,
+.fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
   opacity: 0;
 }
 
 .main-section {
   @extend .jumbotron;
+
   padding-top: 100px;
   padding-bottom: 50px;
 }

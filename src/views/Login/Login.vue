@@ -20,6 +20,16 @@
         icon="key"
         @onEnter="submit(form)"
       />
+      <div class="d-flex justify-content-around">
+        <checkbox-vue
+          id="keepConnected"
+          @onChange="setKeepConnected"
+          label="Manter conectado"
+        ></checkbox-vue>
+        <router-link :to="{ name: 'forgotPassword' }"
+          >Esqueceu sua senha?</router-link
+        >
+      </div>
       <button-vue
         class="login"
         :disabled="$v.form.$invalid"
@@ -46,6 +56,7 @@ import CardVue from "@/components/Orgs/Card.vue";
 import InputFormVue from "@/components/Mols/InputForm.vue";
 import ButtonVue from "@/components/Atoms/Button.vue";
 import AlertVue from "@/components/Atoms/Alert.vue";
+import CheckboxVue from "@/components/Atoms/Checkbox.vue";
 
 export default {
   data() {
@@ -117,7 +128,8 @@ export default {
     CardVue,
     InputFormVue,
     ButtonVue,
-    AlertVue
+    AlertVue,
+    CheckboxVue
   }
 };
 </script>
@@ -130,9 +142,5 @@ form {
 
 .justify-content-around {
   padding: 10px;
-}
-
-.login {
-  margin-top: 36px;
 }
 </style>

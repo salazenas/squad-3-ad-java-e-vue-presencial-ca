@@ -143,4 +143,8 @@ form {
 .justify-content-around {
   padding: 10px;
 }
+
+.justify-content-around {
+  padding: 10px;
+}
 </style>
